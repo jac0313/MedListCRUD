@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Project - Medication List</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container">
+    <h2>My Medication List</h2>
+    <br>
+    <form>
+        <h4>Add New Medication</h4>
+        <div class="row">
+          <div class="col">
+            <input id="newMedName" type="text" class="form-control" placeholder="medication" aria-label="New Medication">
+          </div>
+          <div class="col">
+            <input id="newMedDose" type="text" class="form-control" placeholder="dosage" aria-label="New Med Dosage">
+          </div>
+        </div>
+         <div class="mb-3">
+            <label for="newMedInstructions" class="form-label"></label>
+            <input type="text" class="form-control" id="newMedInstructions" placeholder="MD instructions">
+          </div>
+        <button id="addNewMed" type="button" class="btn btn-primary">Submit</button>
+    </form>
+    <br>
+    <form>
+        <h4>Make Medication Changes</h4>
+        <div class="row">
+          <div class="col">
+            <input id="updateId" type="text" class="form-control" placeholder="ID" aria-label="ID">
+          </div>
+          <div class="col">
+            <input id="updateMedName" type="text" class="form-control" placeholder="medication" aria-label="medication">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col">
+            <input id="updateMedDose" type="text" class="form-control" placeholder="dosage" aria-label="dosage">
+          </div>
+          <div class="col">
+            <input id="updateMedInstructions" type="text" class="form-control" placeholder="instructions" aria-label="instructions">
+          </div>
+        </div>
+        <br>
+          <button id="updateMedList" class="btn btn-primary" type="submit">Update</button>
+    </form>
+    
+    <br>
+    <table class="table table-hover"">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Medication</th>
+            <th scope="col">Dosage</th>
+            <th scope="col">Instructions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+
+    
+    
+    
+    
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="node_modules/jQuery/tmp/jquery.js" ></script>
+    <script src="CRUD.js"></script>
+</body>
+</html>
