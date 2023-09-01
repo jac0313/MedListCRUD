@@ -29,12 +29,6 @@
       "newMedDose": "10mg",
       "newMedInstructions": "take 1 pill in the morning",
       "id": 6
-    },
-    {
-      "newMedName": "metformin",
-      "newMedDose": "1000mg ER",
-      "newMedInstructions": "take 1 pill in the morning and 1 at night",
-      "id": 7
     }
   ]
 }
