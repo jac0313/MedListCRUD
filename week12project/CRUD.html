@@ -9,6 +9,7 @@
 <body class="container">
     <h2>My Medication List</h2>
     <br>
+    <!--creates a form with input to add a new medication to the table-->
     <form>
         <h4>Add New Medication</h4>
         <div class="row">
@@ -26,6 +27,7 @@
         <button id="addNewMed" type="button" class="btn btn-primary">Submit</button>
     </form>
     <br>
+    <!--creates a second form to make updates to already existing medications in the table-->
     <form>
         <h4>Make Medication Changes</h4>
         <div class="row">
@@ -33,22 +35,22 @@
             <input id="updateId" type="text" class="form-control" placeholder="ID" aria-label="ID">
           </div>
           <div class="col">
-            <input id="updateMedName" type="text" class="form-control" placeholder="medication" aria-label="medication">
+            <input id="updateMedName" type="text" class="form-control" placeholder="new medication" aria-label="medication">
           </div>
         </div>
         <br>
         <div class="row">
           <div class="col">
-            <input id="updateMedDose" type="text" class="form-control" placeholder="dosage" aria-label="dosage">
+            <input id="updateMedDose" type="text" class="form-control" placeholder="new dosage" aria-label="dosage">
           </div>
           <div class="col">
-            <input id="updateMedInstructions" type="text" class="form-control" placeholder="instructions" aria-label="instructions">
+            <input id="updateMedInstructions" type="text" class="form-control" placeholder="new instructions" aria-label="instructions">
           </div>
         </div>
         <br>
-          <button id="updateMedList" class="btn btn-primary" type="button">Update</button>
-    </form>
-    
+        <button id="updateMedList" class="btn btn-primary" >Update</button>
+      </form>
+    <!--creates the table-->
     <br>
     <table class="table table-hover"">
         <thead>

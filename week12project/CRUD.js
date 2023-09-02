@@ -1,6 +1,7 @@
-const medListURL = ' http://localhost:3000/medList '
-
+const medListURL = 'http://localhost:3000/medList'
+//link to DB.json
 $.get(medListURL).then((data) =>
+//jquery notation that grabs data from DB.json, then takes that data and adds it to a table
   data.forEach((medication) => {
     $('tbody').append(
       $(`
@@ -16,7 +17,7 @@ $.get(medListURL).then((data) =>
         </svg></button>
       </td>
     </tr>`)
-    )
+    )//adds a delete button with every item listed in the table
   })
 )
 $('#addNewMed').click(function () {
@@ -25,25 +26,36 @@ $('#addNewMed').click(function () {
       newMedDose: $('#newMedDose').val(),
       newMedInstructions: $('#newMedInstructions').val()
     })
-  })
+  })//takes the user input from the input Ids on the form and adds it to the table
   function deleteMed(id) {
-    $.ajax(`${'http://localhost:3000/medList'}/${id}`, {
+    $.ajax(`${medListURL}/${id}`, {
       type: 'DELETE',
     })
-  }
+  }//uses the call to delete a particular Id from the table
+
   function updateMed(event) {
     //event.preventDefault()
     let id = $('#updateId').val()
-  
-    $.ajax(`${'http://localhost:3000/medList'}/${id}`, {
-      method: 'PUT',
+     /*fetch(medListURL + "/" + id,{
+       method: "PUT",
+       headers: {
+         "Content-Type": "application/json"
+       },
+       body: JSON.stringify({
+         newMedName: $('#updateMedName').val(),
+         newMedDose: $('#updateMedDose').val(),
+         newMedInstructions: $('#updateMedInstructions').val()
+       })
+     })*/
+    $.ajax({
+     url: `${medListURL}/${id}`,
+      type: 'PUT',
       data: {
         newMedName: $('#updateMedName').val(),
         newMedDose: $('#updateMedDose').val(),
-        newMedInstructions: $("#updateMedInstructions").val()
-      },
+        newMedInstructions: $('#updateMedInstructions').val()
+     },
     })
   }
-  
-  $('#updateMedList').click(updateMed)
-  
+  //ajax call to update a particular item on the table by Id
+ $('#updateMedList').click(updateMed)

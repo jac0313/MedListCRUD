@@ -1,34 +1,22 @@
 {
   "medList": [
     {
-      "id": 1,
       "newMedName": "metformin",
       "newMedDose": "1000mg",
-      "newMedInstructions": "Take one pill two times a day"
+      "newMedInstructions": "take 1 pill in the morning and 1 at night",
+      "id": 1
     },
     {
       "newMedName": "atorvastatin",
       "newMedDose": "40mg",
       "newMedInstructions": "take 1 pill at night",
-      "id": 3
+      "id": 2
     },
     {
       "newMedName": "glipizide",
-      "newMedDose": "10mg",
+      "newMedDose": "5mg",
       "newMedInstructions": "take with large meals as needed",
-      "id": 4
-    },
-    {
-      "newMedName": "vitamin D + K",
-      "newMedDose": "1 unit",
-      "newMedInstructions": "take 1 daily",
-      "id": 5
-    },
-    {
-      "newMedName": "pioglidizone",
-      "newMedDose": "10mg",
-      "newMedInstructions": "take 1 pill in the morning",
-      "id": 6
+      "id": 3
     }
   ]
 }
